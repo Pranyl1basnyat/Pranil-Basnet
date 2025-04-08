@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png"class="logo">
+                <ul>
+                    <li><a href= "#">Home</a></li>
+                    <li><a href= "#">About</a></li>
+                    <li><a href= "#">Services</a></li>
+                    <li><a href= "#">Portfolio</a></li>
+                    <li><a href= "#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p> Software and ML Engineer</p>
+                <h1>Hi,I'm<span>Pranil</span><br>  the Software and App developer</h1>
+            </div>
+
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class ="about-col-1"></div>
+            <img src="aaa.jpg">
+            <div class ="about-col-2"></div>
+            <h1 class="sub-title">About me</h1>
+            <p>It's me Pranil one of the young Enterprenur and Techoprenure who is highly fascianted for the app 
+                and Software development Currently studying bachlore of  the information technology in the National College of Management and Techanical 
+                Science. I am highly passionate in the innovation of the real time robertics and machine learning . 
+
+            </p>
+
+
+            <div class="tab-titles">
+                <p class="tab-links active-links"onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('experiance')">Experiance</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>
+
+            </div>
+            <div class="tab-contents active-tabs" id="skills">
+                <ul>
+                   
+                    <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                    <li><span>App Development</span><br>Building Android /iOS apps</li>
+                    <li><span>ML Enginner</span><br>Develop and train the robots</li>
+                    <li><span>Computer Teacher</span><br>Teaching the Coding</li>
+                
+                </ul>
+                <div class="tab-contents"id="experiance" >
+                    <ul>
+                       
+                        <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                        <li><span>App Development</span><br>Building Android /iOS apps</li>
+                        <li><span>ML Enginner</span><br>Develop and train the robots</li>
+                        <li><span>Software Development</span><br>Designing the testing the software</li>
+                    
+                    </ul>
+                    <div class="tab-contents">
+                        <ul>
+                           
+                            <li><span>2021</span><br>Web Development at NCMT</li>
+                            <li><span>2022</span><br>App Development at NCMT</li>
+                            <li><span>ML Enginner</span><br>ML at YoutubeCollege</li>
+                            
+                        
+                        </ul>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link")
+            }
+        }
+    </script>
+    
+</body>
+</html>

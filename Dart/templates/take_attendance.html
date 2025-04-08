@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="attendance-form">
+    <h2>Take Attendance</h2>
+    <form method="POST">
+        {% for student in students %}
+            <div class="student-check">
+                <input type="checkbox" name="present" value="{{ student[0] }}" id="student{{ student[0] }}">
+                <label for="student{{ student[0] }}">{{ student[1] }}</label>
+            </div>
+        {% endfor %}
+        <button type="submit">Save Attendance</button>
+    </form>
+</div>
+{% endblock %} 

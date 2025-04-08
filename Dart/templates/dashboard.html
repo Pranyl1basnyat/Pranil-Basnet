@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    {% if session.role == 'teacher' %}
+        <h2>Your Classes</h2>
+        <div class="classes-list">
+            {% for class in classes %}
+                <div class="class-card">
+                    <h3>{{ class.name }}</h3>
+                    <a href="{{ url_for('take_attendance', class_id=class.id) }}" class="btn">Take Attendance</a>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h2>Your Attendance Record</h2>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            {% for record in attendance %}
+                <tr>
+                    <td>{{ record[0] }}</td>
+                    <td>{{ record[1] }}</td>
+                    <td>{{ 'Present' if record[2] else 'Absent' }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</div>
+{% endblock %} 
